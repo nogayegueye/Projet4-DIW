@@ -1,0 +1,22 @@
+{
+  "name": "projet4",
+  "version": "1.0.0",
+  "description": "projet4",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch ./sass/style.scss:./css/style.css"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nogayegueye/Projet4-DIW.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nogayegueye/Projet4-DIW/issues"
+  },
+  "homepage": "https://github.com/nogayegueye/Projet4-DIW#readme"
+}
+
