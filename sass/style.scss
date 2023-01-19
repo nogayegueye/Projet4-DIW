@@ -1,34 +1,35 @@
-.wraper{
+.wrapper{
     max-width: 768px;
+    font-family: "roboto", sans-serif;
 }
-.flex-centre {
+@mixin flex-centre {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.flex-around {
+@mixin flex-around {
     display: flex;
     justify-content: space-around;
     align-items: stretch;
 }
-.flex-between {
+@mixin flex-between {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.flex-column-centre {
+@mixin flex-column-centre {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     
 }
-.flex-column-around {
+@mixin flex-column-around {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
 }
-.flex-column-between {
+@mixin flex-column-between {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -39,18 +40,54 @@
 a:active {
   color: black;
 }
-.fond-gris {
-    background-color: #f2f2f2;
+
+
+.body{
+    margin: 0;
 }
 .logo{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+   @include flex-centre;
+   box-shadow: 0px 1px 4px 1px lightgrey;
+   position: relative;
 }
-.mobile-para{
-    margin-top: 20px;
-    margin-bottom: 20px;
+.recherche{
+    background-color: #EAEAEA;
+    @include flex-centre;
 }
-.mobile-icone{
-    margin-right: 20px;
+.icone{
+    padding: 20px;
 }
+.button-rech{
+    border: none;
+    background-color: #EAEAEA;
+    font-size: medium;
+}
+.desc{
+    @include flex-column-centre;
+    button{
+        color: white;
+        font-weight: 700;
+        font-size: 1rem;
+        border: none;
+        padding: 1rem 2rem;
+        border-radius: 2rem;
+        box-shadow: 0px 1px 4px 1px lightgrey; 
+        background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+        transition: transform 200ms;
+        &:hover{
+            transform: scale(1.02);
+            opacity: 0.9;
+        }
+    }
+    
+}
+h1{
+     margin-bottom: 0px;
+}
+
+
+
+.mobile-texte{
+    padding-right: 20px;
+}
+
