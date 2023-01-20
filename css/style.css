@@ -3,11 +3,7 @@
   font-family: "roboto", sans-serif;
 }
 
-.decoration-none {
-  text-decoration: none;
-}
-
-a:active {
+a {
   color: black;
 }
 
@@ -15,6 +11,7 @@ a:active {
   margin: 0;
 }
 
+/*header*/
 .logo {
   display: flex;
   justify-content: center;
@@ -23,6 +20,7 @@ a:active {
   position: relative;
 }
 
+/*recherche*/
 .recherche {
   background-color: #EAEAEA;
   display: flex;
@@ -40,11 +38,15 @@ a:active {
   font-size: medium;
 }
 
+/*description*/
 .desc {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+.desc h1 {
+  margin-bottom: 0px;
 }
 .desc button {
   color: white;
@@ -62,12 +64,99 @@ a:active {
   opacity: 0.9;
 }
 
-h1 {
-  margin-bottom: 0px;
+main {
+  padding: 1rem;
 }
 
-.mobile-texte {
-  padding-right: 20px;
+/*fonctionnement*/
+.fction {
+  counter-reset: numb;
+}
+.fction ol {
+  padding: 0;
+}
+.fction li {
+  background-color: #F6F6F6;
+  padding: 2rem;
+  margin-bottom: 1rem;
+  border-radius: 2rem;
+  list-style-type: none;
+  position: relative;
+  box-shadow: 0px 1px 4px 1px lightgrey;
+  transform: scale(1.02);
+  opacity: 0.9;
+}
+.fction li i {
+  margin-right: 1rem;
+  color: #7E7E7E;
+  font-size: 1.2rem;
+}
+.fction li::before {
+  content: counter(numb);
+  counter-increment: numb;
+  color: white;
+  background-color: #9356DC;
+  border-radius: 50%;
+  position: absolute;
+  height: 1.5em;
+  width: 1.5rem;
+  display: grid;
+  place-items: center;
+  left: -0.6rem;
+}
+.fction li:hover {
+  background-color: #F5EDFF;
+}
+
+/*menus restaurants*/
+.menus {
+  background-color: #F6F6F6;
+  position: relative;
+}
+.menus .bloc-menus {
+  background-color: white;
+  border-radius: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0px 1px 4px 1px lightgrey;
+}
+.menus .bloc-menus .img-restaurants {
+  object-fit: cover;
+  width: 100%;
+  height: 13rem;
+  border-radius: 2rem 2rem 0 0;
+}
+.menus .bloc-menus .details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  padding-left: 1rem;
+}
+.menus .nouveau::before {
+  content: "Nouveau";
+  position: absolute;
+  color: #008766;
+  height: 1.5rem;
+  width: 5rem;
+  background-color: #99E2D0;
+  right: 2rem;
+  margin-top: 1rem;
+  text-align: center;
+  padding-top: 0.2rem;
+}
+
+/*header*/
+.header {
+  font-family: shrikhand;
+  background-color: #353535;
+  color: white;
+  height: 10rem;
+  padding-left: 1rem;
+  line-height: 2rem;
+}
+.header a {
+  color: white;
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=style.css.map */
