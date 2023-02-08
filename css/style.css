@@ -37,7 +37,7 @@ body {
 
 /*recherche*/
 .recherche {
-  background-color: #EAEAEA;
+  background-color: #eaeaea;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -52,7 +52,7 @@ body {
   font-family: "roboto", "sans-serif";
   font-weight: 500;
   border: none;
-  background-color: #EAEAEA;
+  background-color: #eaeaea;
   font-size: medium;
 }
 
@@ -64,7 +64,7 @@ body {
   justify-content: center;
   text-align: center;
   padding-bottom: 3rem;
-  background-color: #F6F6F6;
+  background-color: #f6f6f6;
 }
 .desc h1 {
   margin-bottom: 0px;
@@ -104,8 +104,8 @@ main {
   margin: 0;
 }
 .fction li {
-  background-color: #F6F6F6;
-  padding: 1rem 1rem 1rem 2rem;
+  background-color: #f6f6f6;
+  padding: 28px 38px;
   margin-bottom: 2rem;
   border-radius: 2rem;
   list-style-type: none;
@@ -116,14 +116,14 @@ main {
 }
 .fction li i {
   margin-right: 1rem;
-  color: #7E7E7E;
+  color: #7e7e7e;
   font-size: 1.2rem;
 }
 .fction li::before {
   content: counter(numb);
   counter-increment: numb;
   color: white;
-  background-color: #9356DC;
+  background-color: #9356dc;
   border-radius: 50%;
   position: absolute;
   height: 1.2em;
@@ -133,12 +133,12 @@ main {
   left: -0.6rem;
 }
 .fction li:hover {
-  background-color: #F5EDFF;
+  background-color: #f5edff;
 }
 
 /*menus restaurants*/
 .menus-resto {
-  background-color: #F6F6F6;
+  background-color: #f6f6f6;
 }
 .menus-resto h2 {
   padding: 3rem 1rem 1rem 1rem;
@@ -151,7 +151,6 @@ main {
   margin: 1rem;
   border-radius: 2rem;
   margin-bottom: 2rem;
-  width: "30vw";
   position: relative;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
 }
@@ -184,7 +183,7 @@ main {
 }
 .menus-resto .bloc-menus .details .fa-solid {
   color: transparent;
-  background-clip: text;
+  background-clip: border-box;
   -webkit-background-clip: text;
   opacity: 0;
   transition: all 200ms;
@@ -197,7 +196,7 @@ main {
 .menus-resto .bloc-menus .nouveau {
   position: absolute;
   color: #008766;
-  background-color: #99E2D0;
+  background-color: #99e2d0;
   height: 1.3rem;
   width: 4rem;
   text-align: center;
@@ -205,8 +204,9 @@ main {
   top: 1rem;
   right: 1rem;
 }
-.menus-resto .bloc-menus .nouveau h1 {
+.menus-resto .bloc-menus .nouveau h2 {
   margin: 0;
+  padding: 0;
 }
 
 /*footer*/
@@ -232,58 +232,6 @@ main {
   padding: 0.5rem;
 }
 
-@media (min-width: 993px) {
-  .body {
-    max-width: 1440px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  ::-webkit-scrollbar {
-    display: none;
-  }
-  .fction {
-    flex-direction: column;
-    margin-left: 10rem;
-  }
-  .fction ol {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    gap: 4rem;
-  }
-  .menus-resto {
-    overflow: scroll;
-  }
-  .menus-resto h2 {
-    margin-left: 10rem;
-  }
-  .menus-resto .conteneur-menu {
-    display: flex;
-    justify-content: space-evenly;
-    width: 95rem;
-    margin-left: 10rem;
-  }
-  .menus-resto .conteneur-menu .resto {
-    width: 23%;
-  }
-  .menus-resto .conteneur-menu .details {
-    line-height: 1rem;
-  }
-  .footer {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: row-reverse;
-    padding-right: 6rem;
-  }
-  .footer h3 {
-    padding-left: 4rem;
-  }
-  .footer p {
-    padding-left: 4rem;
-  }
-}
 @media (min-width: 669px) {
   .wrapper {
     max-width: 992px;
@@ -294,12 +242,12 @@ main {
   .fction ol {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     flex-wrap: wrap;
     gap: 4rem;
   }
   .fction li {
-    width: 18rem;
+    width: 16rem;
   }
   .conteneur-menu {
     display: flex;
@@ -327,6 +275,55 @@ main {
     padding-left: 1rem;
   }
 }
+@media (min-width: 993px) {
+  .wrapper {
+    margin-left: 10rem;
+  }
+  .body {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  .fction {
+    flex-direction: column;
+  }
+  .fction ol {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 4rem;
+  }
+  .menus-resto {
+    overflow: scroll;
+  }
+  .menus-resto .conteneur-menu {
+    display: flex;
+    justify-content: space-evenly;
+    width: 120rem;
+  }
+  .menus-resto .conteneur-menu .resto {
+    width: 23%;
+  }
+  .menus-resto .conteneur-menu .details {
+    line-height: 1rem;
+  }
+  .footer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row-reverse;
+    padding-right: 6rem;
+  }
+  .footer h3 {
+    padding-left: 4rem;
+  }
+  .footer p {
+    padding-left: 4rem;
+  }
+}
 /*pages menus*/
 .wrapper {
   max-width: 668px;
@@ -337,6 +334,7 @@ main {
   display: block;
   object-fit: cover;
   height: 30vh;
+  width: 100%;
 }
 
 .menus h2 {
@@ -350,9 +348,12 @@ main {
 }
 .menus .titre-menus {
   position: relative;
-  background-color: #F6F6F6;
+  background-color: #f6f6f6;
   border-radius: 2rem 2rem 0 0;
   margin-top: -2rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
 }
 .menus .titre-menus i {
   font-size: 1.5rem;
@@ -363,7 +364,7 @@ main {
 }
 .menus .titre-menus .fa-solid {
   color: transparent;
-  background-clip: text;
+  background-clip: border-box;
   -webkit-background-clip: text;
   opacity: 0;
   transition: all 200ms;
@@ -375,7 +376,7 @@ main {
 }
 
 .resto-main {
-  background-color: #F6F6F6;
+  background-color: #f6f6f6;
 }
 .resto-main .menu-grid {
   display: flex;
@@ -395,7 +396,7 @@ main {
   left: 0;
   height: 0.25rem;
   width: 3rem;
-  background-color: #99E2D0;
+  background-color: #99e2d0;
 }
 .resto-main .menu-grid .menus-catg {
   margin: 1rem;
@@ -420,7 +421,7 @@ main {
   animation-delay: 300ms;
 }
 .resto-main .menu-grid .menus-catg .menu-item .desc-menu {
-  padding: 0.5rem 0 0 0.5rem;
+  padding: 1rem 0 0 1rem;
   font-weight: 300;
 }
 .resto-main .menu-grid .menus-catg .menu-item .prix {
@@ -432,7 +433,7 @@ main {
   padding-bottom: 0.5rem;
 }
 .resto-main .menu-grid .menus-catg .menu-item .survol-menu {
-  background-color: #99E2D0;
+  background-color: #99e2d0;
   margin-right: -4rem;
   width: 4rem;
   border-radius: 0 1rem 1rem 0;
@@ -445,11 +446,11 @@ main {
   background-color: white;
   border-radius: 50%;
   width: 1.5rem;
-  aspect-ratio: 1;
+  aspect-ratio: 1/1;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #99E2D0;
+  color: #99e2d0;
 }
 .resto-main .menu-grid .menus-catg .menu-item:hover {
   cursor: pointer;
@@ -490,13 +491,34 @@ main {
 
 @media (min-width: 669px) {
   .wrapper {
+    max-width: 992px;
+  }
+  .titre-menus {
+    text-align: center;
+  }
+  .resto-main .menu-grid {
+    padding: 0 5rem;
+  }
+}
+@media (min-width: 993px) {
+  .wrapper {
     max-width: 1440px;
+  }
+  .menu-center {
+    display: flex;
   }
   .titre-menus {
     margin: -2rem 7rem 0 7rem;
+    text-align: center;
+  }
+  .titre-menus .menu-center i {
+    right: 37%;
   }
   .resto-main {
     margin: 0rem 7rem 0 7rem;
+  }
+  .resto-main .menu-grid {
+    padding: 0 10rem;
   }
 }
 @keyframes anim-menu {
@@ -537,7 +559,7 @@ main {
   height: 100px;
   width: 100px;
   border-right: 5px solid transparent;
-  border-top: 5px solid #9356DC;
+  border-top: 5px solid #9356dc;
   border-radius: 50%;
   animation: spin 1s ease-in-out;
   animation-iteration-count: 3;
