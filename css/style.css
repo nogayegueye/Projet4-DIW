@@ -358,7 +358,7 @@ main {
 .menus .titre-menus i {
   font-size: 1.5rem;
   position: absolute;
-  right: 1rem;
+  right: 0rem;
   top: 50%;
   transform: translateY(-50%);
 }
